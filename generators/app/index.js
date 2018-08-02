@@ -81,8 +81,10 @@ module.exports = class extends Generator {
                 repo: answers.repo ? 'https://github.com/' + answers.repo : '',
                 author: answers.author
             });
+            this.config.save();
             resolve();
         }.bind(this))
+
     })};
     configuring() {
         this.log('configuring')
@@ -127,19 +129,26 @@ module.exports = class extends Generator {
            this.destinationPath('.gitattributes')
         )
         // Copy all of app
-        this.directory('app', './app')
+        this.fs.copy(
+            this.templatePath('app'),
+            this.destinationPath('app')
+        )
         // Copy all of gulp
-        this.directory('gulp', './gulp')
+        this.fs.copy(
+            this.templatePath('gulp'),
+            this.destinationPath('gulp')
+        )
         // Copy config.json
         this.fs.copyTpl(
-            this.templatePath('config.json'),
-            this.destinationPath('config.json'),
+            this.templatePath('config.js'),
+            this.destinationPath('config.js'),
             this.config.getAll()
         )
     };
     install() {
         this.log('install')
-        pkg = JSON.parse(fs.readFileSync('package.json'))
+        // Replace author in package with author entered
+        var pkg = JSON.parse(fs.readFileSync('package.json'))
         pkg.author = this.config.get('author')
         fs.writeFileSync('package.json', beautify(JSON.stringify(pkg)))
 
