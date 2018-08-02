@@ -91,43 +91,45 @@ module.exports = class extends Generator {
         // this.log('default')
     };
     writing() {
+        // Copy bower.json
         this.fs.copyTpl(
             this.templatePath('bower.json'),
             this.destinationPath('bower.json'),
             this.config.getAll()
         )
+        // Copy gulpfile.js
         this.fs.copyTpl(
-            this.templatePath('gulpfile.coffee'),
-            this.destinationPath('gulpfile.coffee'),
+            this.templatePath('gulpfile.js'),
+            this.destinationPath('gulpfile.js'),
             this.config.getAll()
         )
-        this.fs.copyTpl(
-            this.templatePath('helpers.coffee'),
-            this.destinationPath('helpers.coffee'),
-            this.config.getAll()
-        )
+        // Copy package.json
         this.fs.copyTpl(
             this.templatePath('package.json'),
             this.destinationPath('package.json'),
             this.config.getAll()
         )
+        // Copy README.md
         this.fs.copyTpl(
             this.templatePath('README.md'),
             this.destinationPath('README.md'),
             this.config.getAll()
         )
-        // this.fs.copyTpl(
-        //   this.templatePath('.gitignore'),
-        //   this.destinationPath('.gitignore')
-        // )
-
-        this.directory('src', './src')
+        // Copy .gitignore
         this.fs.copyTpl(
-            this.templatePath('_template.json'),
-            this.destinationPath('./src/template.json'),
+           this.templatePath('.gitignore'),
+           this.destinationPath('.gitignore')
+        )
+        // Copy all of app
+        this.directory('app', './app')
+        // Copy all of gulp
+        this.directory('gulp', './gulp')
+        // Copy config.json
+        this.fs.copyTpl(
+            this.templatePath('config.json'),
+            this.destinationPath('config.json'),
             this.config.getAll()
         )
-        this.directory('images', './images')
     };
     install() {
         pkg = JSON.parse(fs.readFileSync('package.json'))
@@ -137,7 +139,10 @@ module.exports = class extends Generator {
         if (this.options['skip-install']) {
             this.log('Skipping ' + 'npm install'.magenta + ' and ' + 'bower install'.magenta + '. Run these yourself.')
         } else {
+            // Explicitly install wikibrick to bypass errors with npm
+            // dependency resolution
             this.installDependencies()
+            this.npmInstall(['igem-wikibrick'], {'dev': true});
         }
     };
     conflicts() {
