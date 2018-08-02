@@ -81,7 +81,7 @@ module.exports = class extends Generator {
                 repo: answers.repo ? 'https://github.com/' + answers.repo : '',
                 author: answers.author
             });
-            this.config.save();
+            //this.config.save();
             resolve();
         }.bind(this))
 
