@@ -120,6 +120,11 @@ module.exports = class extends Generator {
            this.templatePath('.gitignore'),
            this.destinationPath('.gitignore')
         )
+        // Copy .gitignore
+        this.fs.copyTpl(
+           this.templatePath('.gitattributes'),
+           this.destinationPath('.gitattributes')
+        )
         // Copy all of app
         this.directory('app', './app')
         // Copy all of gulp
