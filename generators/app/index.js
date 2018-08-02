@@ -58,7 +58,7 @@ module.exports = class extends Generator {
                     if (!good)
                         return 'Follow ' + 'username'.magenta + '/' + 'repo'.magenta + ' format.'
 
-                    base_url = 'https://github.com/'
+                    var base_url = 'https://github.com/'
 
                     var httpResponse = requestSync('GET', base_url + input)
 
