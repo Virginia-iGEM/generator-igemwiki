@@ -6,12 +6,13 @@ var beautify = require('js-beautify').js_beautify
 
 module.exports = class extends Generator {
     constructor(args, opts) {
-        super(args, opts);
+        super(args, opts);;
 
-        this.option('skip-install')
-        this.option('skip-repo')
+        this.option('skip-install');
+        this.option('skip-repo');
     };
     initializing() {
+        this.log('Promise we\'re working <3');
         // this.log('destinationRoot', this.destinationRoot())
         // this.log('sourceRoot', this.sourceRoot())
     };
@@ -73,24 +74,24 @@ module.exports = class extends Generator {
             })
         }
 
-        this.prompt(questions, function (answers) {
+        return this.prompt(questions).then(function(answers) {
             this.config.set({
                 year: answers.year,
                 teamName: answers.teamName,
                 repo: answers.repo ? 'https://github.com/' + answers.repo : '',
                 author: answers.author
-            })
-            resolve()
+            });
+            resolve();
         }.bind(this))
-
     })};
     configuring() {
-        // this.log('configuring')
+        this.log('configuring')
     };
     default() {
-        // this.log('default')
+        this.log('default')
     };
     writing() {
+        this.log('writing')
         // Copy bower.json
         this.fs.copyTpl(
             this.templatePath('bower.json'),
@@ -137,6 +138,7 @@ module.exports = class extends Generator {
         )
     };
     install() {
+        this.log('install')
         pkg = JSON.parse(fs.readFileSync('package.json'))
         pkg.author = this.config.get('author')
         fs.writeFileSync('package.json', beautify(JSON.stringify(pkg)))
@@ -151,7 +153,7 @@ module.exports = class extends Generator {
         }
     };
     conflicts() {
-        //this.log('conflicts')
+        this.log('conflicts')
     };
     end() {
         this.log('Good Bye!')
