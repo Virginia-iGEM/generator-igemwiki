@@ -1,0 +1,72 @@
+@import "common";
+
+$grid-layout: ( 
+  columns: 1, 
+  //gutter: 2rem, 
+  gutter: 0
+);
+
+$grid-layout-media:( 
+  columns: 16, 
+  //gutter: 2rem, 
+  gutter: 0,
+  media: $breakpoint
+);
+
+a,
+a:visited {
+  text-decoration: none;
+  color: $accent-cold-1;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    text-decoration: none;
+    color: $accent-warm-1;
+    text-shadow: 0px 0px 8px $accent-warm;
+  }
+}
+
+img {
+  width: auto;
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  @include common-style;
+  font-size: $font-size;
+  font-family: $font-family;
+  height: 100%;
+  margin: 0 auto;
+  height: auto;
+  position: relative;
+  background-color: $background-light-1;
+  z-index: 1;
+  article {
+    margin-top: 2em;
+    img, aside {
+      width: 30em;
+      float: right;
+      position: relative;
+      transform: translateY(-50%);
+      margin-left: 5em;
+    }
+  }
+  &>* {
+    background-size: cover;
+    //padding-right: 30px;
+    //padding-bottom: 50px;
+    //padding-left: 80px;
+  }
+}
+
+@import "pages/index";
+@import "pages/team";
+@import "header";
+@import "scrollbar";
+@import "tooltips";
+@import "navline";
+@import "footer";

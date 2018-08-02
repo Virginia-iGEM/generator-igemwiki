@@ -1,0 +1,92 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+footer {
+  $footer-height: 6rem; // Footer height
+  $footer-grid: ( columns: 12, gutter: 0px);
+  font-size: $font-size;
+  font-family: $font-family;
+  @include grid-container;
+  box-sizing: border-box;
+  background-color: $background-dark;
+  //border-top: 1px solid $accent-color;
+  color: $text-light;
+  padding: 25px; //@include grid-visual;
+  positioN: relative;
+  z-index: 999;
+
+  div.footer-name {
+    @include grid-column(5, $footer-grid);
+    @include block-height($footer-height);
+    * {
+      float: left;
+    }
+  }
+  div.spacer {
+    @include grid-column(4, $footer-grid);
+    @include block-height($footer-height); //text-align: center;
+  }
+  div.social-container {
+    @include grid-column(3, $footer-grid);
+  }
+}
+
+@mixin transformScale($size: 1) {
+  transform: scale($size);
+}
+
+/*Code courtesy of https://codepen.io/brandondward/pen/RpyaKL*/
+
+$timing: 265ms;
+$iconColor: $accent-warm; //#ff003c;
+$accent: $accent-cold; //#c648c8;
+
+.social-container {
+  //@include grid-visual;
+  @include grid-column(3);
+  width: 400px; //margin: 40vh auto;
+  //text-align: right;
+}
+
+.social-icons {
+  padding: 0;
+  list-style: none;
+  margin: 1em;
+  li {
+    display: inline-block;
+    margin: 0.15em;
+    position: relative;
+    font-size: 1.2em;
+  }
+  i {
+    color: #fff;
+    position: absolute;
+    top: 21px;
+    left: 21px;
+    transition: all $timing ease-out;
+  }
+  a {
+    display: inline-block; //@include grid-visual;
+    &:before {
+      @include transformScale();
+      content: " ";
+      width: 60px;
+      height: 60px;
+      border-radius: 100%;
+      display: block;
+      background: linear-gradient(45deg, $iconColor, $accent);
+      transition: all $timing ease-out;
+    }
+    &:hover:before {
+      transform: scale(0);
+      transition: all $timing ease-in;
+    }
+    &:hover i {
+      @include transformScale(2.2);
+      color: $iconColor;
+      background: -webkit-linear-gradient(45deg, $iconColor, $accent);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: all $timing ease-in;
+    }
+  }
+}
