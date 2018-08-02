@@ -4,11 +4,25 @@ This tool is heavily inspired by Julian Mazzitelli's (iGEM Toronto 2016) [genera
 
 ## Description
 
-`generator-igemwiki` is a [Yeoman generator](http://yeoman.io/); a tool that creates scaffolds for iGEM Wikis using Virginia 2018's wiki build tool, [igem-wikibrick](https://github.com/Virginia-iGEM/igem-wikibrick).
+`generator-igemwiki` is a [Yeoman generator](http://yeoman.io/); a tool that creates scaffolds for iGEM Wikis for use with Virginia 2018's wiki build tool, [igem-wikibrick](https://github.com/Virginia-iGEM/igem-wikibrick).
 
 In english: `generator-igemwiki` makes creating a professional, high-quality iGEM Wiki quickly and easily. The tool provides you with a highly flexible template that can be edited locally and offline; changes are rendered instantly in your web browser, and all files can be uploaded automatically to the iGEM wiki.
 
-Depending on experience level and ambition, different extensions to the scaffold are available which can bring teams closer to their goal. The most simple scaffold uses pure HTML, CSS, JavaScript, and regular old images and fonts. We've added optional extensions such as Handlebars which can be used for pre-publish templating, and vendor packages like JQuery which can be used for live templating. Frameworks like Bootstrap, Bulma and Material can be added on that can simplify the process of web development for those who are new to programming. Preprocessors and postprocessors can be added such as SASS, Autoprefixer and minifiers that make writing clean, readable code faster.
+TODO: Depending on experience level and ambition, different extensions to the scaffold will be available in the future which can bring teams closer to their goal. The most simple scaffold uses pure HTML, CSS, JavaScript, and regular old images and fonts. We've added optional extensions such as Handlebars which can be used for pre-publish templating, and vendor packages like JQuery which can be used for live templating. Frameworks like Bootstrap, Bulma and Material can be added on that can simplify the process of web development for those who are new to programming. Preprocessors and postprocessors can be added such as SASS, Autoprefixer and minifiers that make writing clean, readable code faster.
+
+## Quickstart
+
+For those who already have Node installed, know of Git and know their terminal:
+
+```bash
+npm install -g npm
+npm install -g yo bower gulp@next https://github.com/Virginia-iGEM/generator-igemwiki
+mkdir igem-2018-wiki
+cd igem-2018-wiki
+yo igemwiki
+```
+
+If that made no sense, please continue on to [Installation and Setup](#installation-and-setup) for a full walkthrough.
 
 ## Installation and Setup
 
@@ -18,16 +32,11 @@ Once you've downloaded Node.js, launch a terminal. On Windows, Powershell is our
 
 Now, we'll update `npm`, the Node.js package manager (like `apt` or `pip`) to the latest version; install `yo`, Yeoman; install `bower`, our live dependency manager; install `gulp@next`, gulp v4.0, which is the command-line task runner our build system uses; and `generator-igemwiki`, which is of course this generator:
 
-
 ```bash
 npm install -g npm    # update npm to latest version
 npm install -g yo bower gulp@next
-npm install -g generator-igemwiki
+npm install https://github.com/Virginia-iGEM/generator-igemwiki
 ```
-
-**WARN: THE GENERATOR-IGEMWIKI NPM PACKAGE IS CURRENTLY NOT UP TO DATE. THE PACKAGE HOSTED ON NPM IS CURRENTLY FROM A PREVIOUS AUTHOR, AND WE ARE WORKING WITH HIM TO UPDATE IT. PLEASE SUBSTITUTE THE FOLLOWING COMMAND FOR `npm install -g generator-igemwiki` FOR NOW:**
-
-`npm install https://github.com/Virginia-iGEM/generator-igemwiki`
 
 Several pages of information should be logged. If these commands complete without errors, proceed to create a new folder that will hold all the code for your wiki. For example, mine is located in `C:\Users\Mantissa\Projects\igem-2018-wiki`; place it somewhere easy to access, such as your Documents, Desktop, or your Home folder on Unix.
 
@@ -96,4 +105,14 @@ At this point, you've installed all the necessary packages, and set up your proj
 
 ## Usage
 
-TODO
+Once the project is set up, you are ready to use `igem-wikibrick`, our build-and-upload tool. See the [igem-wikibrick tutorial](https://github.com/Virginia-iGEM/igem-wikibrick/tree/master/docs/tutorial)
+
+## Contributing
+
+If you're interested in JavaScript, Handlebars, Markdown, Webpack, templating libraries like Handlebars, view libraries like React.js or Angular, and the future of frameworks support the iGEM wiki, and would like to contribute to the tools used to make the `igemwiki` stack run, we welcome pull requests, issue submissiosn and emails at [virginia.igem@gmail.com](mailto:virginia.igem@gmail.com).
+
+Links to repositories that make this tool work:
+
+- [igem-wikibrick](https://github.com/Virginia-iGEM/igem-wikibrick), the beating heart of this generator, which supports uploading, browsersync and building.
+- The original [igemwiki-api](https://github.com/igemuoftATG/igemwiki-api), written by Toronto 2016's Julian Mazzitelli
+  - Our fork of [igemwiki-api](https://github.com/Virginia-iGEM/igemwiki-api), which fixes a few bugs with Julian's code and may be pulled in the future. `igem-wikibrick` runs off of this library.
