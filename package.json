@@ -11,6 +11,9 @@
         "wiki"
     ],
     "dependencies": {
+        "colors": "^1.1.2",
+        "js-beautify": "^1.5.10",
+        "sync-request": "^2.0.1",
         "yeoman-generator": "^1.0.0"
     }
 }
