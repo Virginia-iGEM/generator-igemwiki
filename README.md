@@ -112,6 +112,12 @@ Before you move on, if you haven't already, you should commit your changes to Gi
 
 Once the project is set up, you are ready to use `igem-wikibrick`, our build-and-upload tool. See the [igem-wikibrick tutorial](https://github.com/Virginia-iGEM/igem-wikibrick/tree/master/docs/tutorial)
 
+## Documentation?
+
+You might be thinking "For a tool this complex, this page is awfully sparse on documentation."
+
+Because this is just a _generator_ wrapped around `igem-wikibrick`; most of our documentation and usage guides, including a detailed usage tutorial, migration guide, and programmer's guide with tool architecture, can be found on the [igem-wikibrick repository](https://github.com/Virginia-iGEM/igem-wikibrick/).
+
 ## Contributing
 
 If you're interested in JavaScript, Handlebars, Markdown, Webpack, templating libraries like Handlebars, view libraries like React.js or Angular, and the future of frameworks support the iGEM wiki, and would like to contribute to the tools used to make the `igemwiki` stack run, we welcome pull requests, issue submissiosn and emails at [virginia.igem@gmail.com](mailto:virginia.igem@gmail.com).
