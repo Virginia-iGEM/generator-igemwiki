@@ -1,7 +1,7 @@
 {
-  "name": "virginia-2018-wiki",
-  "version": "0.3.0",
-  "description": "Contains all webcontent that will be found on http://2018.igem.org/Team:Virginia.",
+  "name": "<%= teamName %>-<%= year %>-wiki",
+  "version": "0.1.0",
+  "description": "Contains all webcontent that will be found on http://<%= year %>.igem.org/Team:<%= teamname %>.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,21 +10,19 @@
   "author": "Dylan Culfogienis",
   "license": "MIT",
   "dependencies": {
-    "gulp-update": "0.0.2"
   },
   "devDependencies": {
     "bower": "^1.8.4",
     "css-reset-and-normalize": "^1.0.1",
     "gulp": "github:gulpjs/gulp#4.0",
-    "igem-wikibrick": "^0.3.22",
-    "string-format": "^2.0.0"
+    "igem-wikibrick": "^0.3.22"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mantissa-23/VGEM-2018.git"
+    "url": "git+<%= repo %>"
   },
   "bugs": {
-    "url": "https://github.com/Mantissa-23/VGEM-2018/issues"
+    "url": "<%= repo %>/issues"
   },
-  "homepage": "https://github.com/Mantissa-23/VGEM-2018#readme"
+  "homepage": "<%= repo %>#readme"
 }

@@ -1,5 +1,5 @@
 var gulp = require('gulp');
 
-gulp.task('dummy', function(done) {
-  console.log('this is a dummy task').then(done);
+gulp.task('example', function(done) {
+  console.log('this is an example task').then(done);
 });

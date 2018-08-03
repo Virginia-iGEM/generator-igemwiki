@@ -1,12 +1,12 @@
 {
-  "name": "vgem-2018-wiki",
-  "description": "Virginia iGEM 2018 Wiki Pages",
+  "name": "<%= teamName %>-<%= year %>-wiki",
+  "description": "<%= teamName %> iGEM <%= year %> Frontend Dependencies",
   "main": "index.js",
   "authors": [
-    "Mantissa-23 <dylanculfogienis@gmail.com>"
+    "<%= author %>"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/Mantissa-23/VGEM-2018",
+  "homepage": "<%= repo %>",
   "private": true,
   "ignore": [
     "**/.*",
