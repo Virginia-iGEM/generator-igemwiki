@@ -1,7 +1,7 @@
 {
   "name": "<%= teamName %>-<%= year %>-wiki",
   "version": "0.1.0",
-  "description": "Contains all webcontent that will be found on http://<%= year %>.igem.org/Team:<%= teamname %>.",
+  "description": "Contains all webcontent that will be found on http://<%= year %>.igem.org/Team:<%= teamName %>.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
