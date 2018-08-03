@@ -51,7 +51,7 @@ module.exports = function (root) {
     // Teaminfo. Used mainly for URL Substitution.
     const teaminfo = {
         year: <%= year %>,
-        teamName: <%= teamName %>
+        teamName: '<%= teamName %>'
   }
 
     // Listed file sources for all tasks. Note use of glob patterns and wildcarding.
