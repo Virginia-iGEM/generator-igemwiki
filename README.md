@@ -120,7 +120,7 @@ Because this is just a _generator_ wrapped around `igem-wikibrick`; most of our 
 
 ## Contributing
 
-If you're interested in JavaScript, Handlebars, Markdown, Webpack, templating libraries like Handlebars, view libraries like React.js or Angular, and the future of frameworks support the iGEM wiki, and would like to contribute to the tools used to make the `igemwiki` stack run, we welcome pull requests, issue submissiosn and emails at [virginia.igem@gmail.com](mailto:virginia.igem@gmail.com).
+If you're interested in JavaScript, Handlebars, Markdown, Webpack, templating libraries like Handlebars, view libraries like React.js or Angular, and the future of frameworks support the iGEM wiki, and would like to contribute to the tools used to make the `igemwiki` stack run, we welcome pull requests, issue submission and emails at [virginia.igem@gmail.com](mailto:virginia.igem@gmail.com).
 
 If you are on an iGEM team, helping us by submitting issues, or forking and pull requesting can count towards a collaboration for your team.
 
