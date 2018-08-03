@@ -1,6 +1,6 @@
 {
     "name": "generator-igemwiki",
-    "version": "0.3.3",
+    "version": "0.3.4",
     "description": "A Yeoman generator that creates templates for iGEM Wikis",
     "files": [
         "generators"
