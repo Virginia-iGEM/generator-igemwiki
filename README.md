@@ -118,6 +118,16 @@ You might be thinking "For a tool this complex, this page is awfully sparse on d
 
 Because this is just a _generator_ wrapped around `igem-wikibrick`; most of our documentation and usage guides, including a detailed usage tutorial, migration guide, and programmer's guide with tool architecture, can be found on the [igem-wikibrick repository](https://github.com/Virginia-iGEM/igem-wikibrick/).
 
+## Todo
+
+- Fix _igemwiki-override.scss_ so that it actually corrects for the wiki styles and the published site reflects the local build site 1:1
+- Update template so that instead of just being a clone of our wiki, it's a generic template
+- Create multiple templates, ranging from simple (basic HTML, CSS and JS) to complex (Full SCSS, Handlebars templating, bower frontend package management)
+  - Add templates for common frameworks (bootstrap, angular, etc.)
+    - Do this by using those generators as subgenerators?? Not sure how easy this would be.
+  - Do this with optional flags so users can mix-and-match?
+- Update all files so that they actually use Yeoman templating instead of just being... Our files.
+
 ## Contributing
 
 If you're interested in JavaScript, Handlebars, Markdown, Webpack, templating libraries like Handlebars, view libraries like React.js or Angular, and the future of frameworks support the iGEM wiki, and would like to contribute to the tools used to make the `igemwiki` stack run, we welcome pull requests, issue submission and emails at [virginia.igem@gmail.com](mailto:virginia.igem@gmail.com).
