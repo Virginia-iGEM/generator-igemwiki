@@ -30,6 +30,8 @@ First, you must download and install the latest version of [Node.js](https://nod
 
 Once you've downloaded Node.js, launch a terminal. On Windows, Powershell is our terminal of choice (Start Menu > Search > Powershell); as far as we are aware, cmd.exe will work as well, but we reccommend Powershell. On Mac, we reccommend [iTerm2](https://www.iterm2.com/), though the built-in Terminal should work just fine. On Linux, any modern BASH-like shell should work.
 
+> If you are nervous about using the terminal, we have written a short [Introduction to the Terminal](https://github.com/Virginia-iGEM/2018-tutorials/tree/master/cli) article, specifically aimed at iGEM students.
+
 Now, we'll update `npm`, the Node.js package manager (like `apt` or `pip`) to the latest version; install `yo`, Yeoman; install `bower`, our live dependency manager; install `gulp@next`, gulp v4.0, which is the command-line task runner our build system uses; and `generator-igemwiki`, which is of course this generator:
 
 ```bash
@@ -69,11 +71,6 @@ A short aside: at this point, if you haven't already, we **strongly** reccommend
 - [Download and install Git](https://git-scm.com/)
 - Set up a [GitHub account](https://github.com/join) and a [GitHub organization for your team](https://www.sap.com/developer/tutorials/webide-github-creating-org.html)
 - [Create a new GitHub repository for your wiki](https://help.github.com/articles/create-a-repo/). Note, when creating a new repository, do **NOT** check the **Initialize this repository with a README**, even if the instructions say to, as we will be pushing an existing repository to GitHub later on.
-- `git init` in your project folder to create a new GitHub repository
-- `git add .` to add all the files currently in the repository
-- `git commit -m "Initial commit"` to create your first commit
-- `git remote add origin https://github.com/username/reponame` to link your repository to GitHub
-- `git push -u origin master` to push your information to GitHub
 
 Your project should now show up on the page for your GitHub repository.
 
@@ -103,6 +100,14 @@ This generated project has the following properties:
 
 At this point, you've installed all the necessary packages, and set up your project, and you can start working.
 
+Before you move on, if you haven't already, you should commit your changes to Git and push to your repository:
+
+- `git init` in your project folder to create a new GitHub repository
+- `git add .` to add all the files currently in the repository
+- `git commit -m "Initial commit"` to create your first commit
+- `git remote add origin https://github.com/username/reponame` to link your repository to GitHub
+- `git push -u origin master` to push your information to GitHub
+
 ## Usage
 
 Once the project is set up, you are ready to use `igem-wikibrick`, our build-and-upload tool. See the [igem-wikibrick tutorial](https://github.com/Virginia-iGEM/igem-wikibrick/tree/master/docs/tutorial)
@@ -110,6 +115,8 @@ Once the project is set up, you are ready to use `igem-wikibrick`, our build-and
 ## Contributing
 
 If you're interested in JavaScript, Handlebars, Markdown, Webpack, templating libraries like Handlebars, view libraries like React.js or Angular, and the future of frameworks support the iGEM wiki, and would like to contribute to the tools used to make the `igemwiki` stack run, we welcome pull requests, issue submissiosn and emails at [virginia.igem@gmail.com](mailto:virginia.igem@gmail.com).
+
+If you are on an iGEM team, helping us by submitting issues, or forking and pull requesting can count towards a collaboration for your team.
 
 Links to repositories that make this tool work:
 
