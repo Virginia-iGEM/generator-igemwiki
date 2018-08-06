@@ -103,7 +103,7 @@ This generated project has the following properties:
   - _CSS_: `.scss` files, which can be found in the `styles` folder, will be compiled together using the rules of SASS to create a single `styles.css` folder that all pages use. Note that if you want to create separate files for different pages, this is entirely possible; just create new `.scss` files. The tool will also compile standard CSS files; just use the `.css` file ending and place them in `styles`.
   - _JavaScript_: `.js` files, which can be found in `scripts`. Currently we only have support for plain, standard browser JavaScript. All of the files in `scripts` will be concatenated together for build into a file named `wiki.js`, which is uploaded and referenced automatically by all pages. In the future we may move to `browserify`, which will allow `require()` statements in JS, enabling use of Node packages.
   - _Images_: Currently only .png and .jpg images are supported. Support for other kinds of images is entirely possible; just change the `buildsrc` and `uploadsrc` wildcard entries in `config.js` to find, for example, `.svg` files.
-  - Fonts: Currently only `ttf`, `otf` and `woff` fonts are supported. If you need to add more, follow the same procedure as above.
+  - _Fonts_: Currently only `ttf`, `otf` and `woff` fonts are supported. If you need to add more, follow the same procedure as above.
 - Custom `gulp` subtasks can be added to the gulp/unit folder. Note the example `example` task.
 - Custom `gulp` tasks dependent on other gulp tasks can be added to `gulpfile.js`. Note the example `dummy` task.
 
