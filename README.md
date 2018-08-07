@@ -131,9 +131,9 @@ Because this is just a _generator_ wrapped around `igem-wikibrick`; most of our 
 
 - Fix _igemwiki-override.scss_ so that it actually corrects for the wiki styles and the published site reflects the local build site 1:1
 - Update template so that instead of just being a clone of our wiki, it's a generic template
-- Create multiple templates, ranging from simple (basic HTML, CSS and JS) to complex (Full SCSS, Handlebars templating, bower frontend package management)
+- Create multiple templates, ranging from simple (basic HTML, CSS and JS, for teams that just want the autoupload/URL Substitution/offline development features) to complex (Full SCSS, Handlebars templating, AJAX loads, bower frontend package management, for teams that are willing to learn a bit more to be more efficient)
   - Add templates for common frameworks (Bootstrap, Angular, etc.)
-    - Do this by using those generators as subgenerators?? Not sure how easy this would be.
+  - Do this by using those generators as subgenerators?? Not sure how easy this would be.
   - Do this with optional flags so users can mix-and-match?
 - Update all files so that they actually use Yeoman templating instead of just being... Our files.
 
