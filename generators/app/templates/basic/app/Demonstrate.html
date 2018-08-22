@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="/dist/js/vendor.js"></script>
+	<link rel="stylesheet" href="/dist/css/vendor.css">
+	<script>
+		$(function() {
+			$('header').load('/templates/header.html');
+			$('footer').load('/templates/footer.html');
+		});
+	</script>
+	<link rel="stylesheet" href="/css/styles.css">
+	<script src="/js/wiki.js"></script>
+	<!--Added MathJax hack to make inline equations work-->
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+		tex2jax: {
+		inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+		processEscapes: true
+	}
+});
+</script>   </head>
+
+<body>
+	<div id="igem-navbar-placeholder">
+		<p>Placeholder for iGEM Navbar</p>
+	</div>
+	<header></header>    <main id="top">
+		<article>
+			<h1> Demonstrate </h1>
+
+			<p> Teams that can show their system working under real world conditions are usually good at impressing the judges in iGEM. To achieve gold medal criterion #4, convince the judges that your project works. There are many ways in which your project working could be demonstrated, so there is more than one way to meet this requirement. This gold medal criterion was introduced in 2016, so check our what 2016 teams did to achieve their gold medals! </p>
+
+			<p> This is a gold medal criterion. </p>
+		</article>
+	</main>    <footer></footer>
+</body>
+</html>
+
+

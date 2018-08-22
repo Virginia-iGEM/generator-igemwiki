@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="/dist/js/vendor.js"></script>
+	<link rel="stylesheet" href="/dist/css/vendor.css">
+	<script>
+		$(function() {
+			$('header').load('/templates/header.html');
+			$('footer').load('/templates/footer.html');
+		});
+	</script>
+	<link rel="stylesheet" href="/css/styles.css">
+	<script src="/js/wiki.js"></script>
+	<!--Added MathJax hack to make inline equations work-->
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+		tex2jax: {
+		inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+		processEscapes: true
+	}
+});
+</script>   </head>
+
+<body>
+	<div id="igem-navbar-placeholder">
+		<p>Placeholder for iGEM Navbar</p>
+	</div>
+	<header></header>    <main id="top">
+		<article>
+			<h1> Notebook </h1>
+
+			<p> Document the dates you worked on your project. This should be a detailed account of the work done each day for your project. </p>
+
+			<p> This page should contain: </p>
+			<ul>
+				<li> Chronological notes of what your team is doing. </li>
+				<li> Brief descriptions of daily important events. </li>
+				<li> Pictures of your progress. </li>
+				<li> Mention who participated in what task. </li>
+			</ul>
+		</article>
+	</main>    <footer></footer>
+</body>
+</html>
+
+

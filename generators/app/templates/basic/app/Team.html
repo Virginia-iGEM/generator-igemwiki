@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="/dist/js/vendor.js"></script>
+	<link rel="stylesheet" href="/dist/css/vendor.css">
+	<script>
+		$(function() {
+			$('header').load('/templates/header.html');
+			$('footer').load('/templates/footer.html');
+		});
+	</script>
+	<link rel="stylesheet" href="/css/styles.css">
+	<script src="/js/wiki.js"></script>
+	<!--Added MathJax hack to make inline equations work-->
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+		tex2jax: {
+		inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+		processEscapes: true
+	}
+});
+</script>   </head>
+
+<body>
+	<div id="igem-navbar-placeholder">
+		<p>Placeholder for iGEM Navbar</p>
+	</div>
+	<header></header>    <main id="top">
+		<article>
+			<h1> Team </h1>
+
+			<p> This page should contain: </p>
+			<ul> 
+				<li> Include pictures of your teammates, don't forget instructors and advisors! </li>
+				<li> You can add a small biography or few words from each team member, to tell us what you like, and what motivated you to participate in iGEM. </li>
+				<li> Take team pictures! Show us your school, your lab and a little bit of your city. </li>
+				<li> Remember that image galleries can help you showcase many pictures while saving space. </li>
+			</ul>
+		</article>
+	</main>    <footer></footer>
+</body>
+</html>
+
+

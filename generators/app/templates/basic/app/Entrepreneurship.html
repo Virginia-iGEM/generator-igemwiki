@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="/dist/js/vendor.js"></script>
+	<link rel="stylesheet" href="/dist/css/vendor.css">
+	<script>
+		$(function() {
+			$('header').load('/templates/header.html');
+			$('footer').load('/templates/footer.html');
+		});
+	</script>
+	<link rel="stylesheet" href="/css/styles.css">
+	<script src="/js/wiki.js"></script>
+	<!--Added MathJax hack to make inline equations work-->
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+		tex2jax: {
+		inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+		processEscapes: true
+	}
+});
+</script>   </head>
+
+<body>
+	<div id="igem-navbar-placeholder">
+		<p>Placeholder for iGEM Navbar</p>
+	</div>
+	<header></header>    <main id="top">
+		<article>
+			<h1> Entrepreneurship </h1> 
+
+			<p> In previous years, iGEM had an entrepreneurship track. Teams were encouraged to build projects and focus on commercializing their work. We have now moved to an award as the best work in this area may come from teams who are not solely focused on entrepreneurship. </p>
+
+			<p> The Best Supporting Entrepreneurship award recognizes exceptional effort to build a business case and commercialize an iGEM project. This award is open to all teams to show that entrepreneurship is something all teams can aspire to do with their project. This award can go to an new project, or to a previous project that a team aimed to commercialize. Have you filed a provisional patent on your project/device/process? Have you raised money to build and ship products? Have you pitched your idea to investors and received money? As always in iGEM, the aim is to impress the judges! </p>
+
+			<p> To compete for the Best Supporting Entrepreneurship prize, please describe your work on this page and also fill out the description on the judging form. </p>
+		</article>
+	</main>    <footer></footer>
+</body>
+</html>
+
+

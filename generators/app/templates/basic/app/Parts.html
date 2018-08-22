@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="/dist/js/vendor.js"></script>
+	<link rel="stylesheet" href="/dist/css/vendor.css">
+	<script>
+		$(function() {
+			$('header').load('/templates/header.html');
+			$('footer').load('/templates/footer.html');
+		});
+	</script>
+	<link rel="stylesheet" href="/css/styles.css">
+	<script src="/js/wiki.js"></script>
+	<!--Added MathJax hack to make inline equations work-->
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+		tex2jax: {
+		inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+		processEscapes: true
+	}
+});
+</script>   </head>
+
+<body>
+	<div id="igem-navbar-placeholder">
+		<p>Placeholder for iGEM Navbar</p>
+	</div>
+	<header></header>    <main id="top">
+		<article>
+			<h1> Parts </h1>
+
+			<p> Each team will make new parts during iGEM and will submit them to the Registry of Standard Biological Parts. The iGEM software provides an easy way to present the parts your team has created. </p>
+
+			<p> Remember that the goal of proper part documentation is to describe and define a part, so that it can be used without needing to refer to the primary literature. Registry users in future years should be able to read your documentation and be able to use the part successfully. Also, you should provide proper references to acknowledge previous authors and to provide for users who wish to know more. </p>
+		</article>
+	</main>    <footer></footer>
+</body>
+</html>
+
+

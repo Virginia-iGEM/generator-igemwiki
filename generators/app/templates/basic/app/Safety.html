@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="/dist/js/vendor.js"></script>
+	<link rel="stylesheet" href="/dist/css/vendor.css">
+	<script>
+		$(function() {
+			$('header').load('/templates/header.html');
+			$('footer').load('/templates/footer.html');
+		});
+	</script>
+	<link rel="stylesheet" href="/css/styles.css">
+	<script src="/js/wiki.js"></script>
+	<!--Added MathJax hack to make inline equations work-->
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+		tex2jax: {
+		inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+		processEscapes: true
+	}
+});
+</script>   </head>
+
+<body>
+	<div id="igem-navbar-placeholder">
+		<p>Placeholder for iGEM Navbar</p>
+	</div>
+	<header></header>    <main id="top">
+		<article>
+			On this page of your wiki, you should write about how you are addressing any safety issues in your project. The wiki is a place where you can go beyond the questions on the safety forms, and write about whatever safety topics are most interesting in your project. (You do not need to copy your safety forms onto this wiki page.)
+
+			<p> Does your project include any safety features? Have you made certain decisions about the design to reduce risks? Write about them here! For example: </p>
+
+			<ul> 
+				<li> Choosing a non-pathogenic chassis </li>
+				<li> Choosing parts that will not harm humans/animals/plants</li>
+				<li> Substituting safer materials for dangerous materials in a proof-of-concept experiment </li> 
+				<li> Including an "induced lethality" or "kill switch" device </li>
+			</ul>
+
+			<p> Safe Lab Work </p>
+			<p> What safety procedures do you use every day in the lab? Did you perform any unusual experiments, or face any unusual safety issues? Write about them here! </p>
+
+			<p> Safe Shipment </p>
+			<p> Did you face any safety problems in sending your DNA parts to the Registry? How did you solve those problems? </p>
+		</article>
+	</main>    <footer></footer>
+</body>
+</html>
+
+

@@ -1,0 +1,22 @@
+{
+  "name": "vgem-2018-wiki",
+  "description": "Virginia iGEM 2018 Wiki Pages",
+  "main": "index.js",
+  "authors": [
+    "Mantissa-23 <dylanculfogienis@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Mantissa-23/VGEM-2018",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fontawesome": "^5.0.13",
+    "jquery": "^3.3.1"
+  }
+}

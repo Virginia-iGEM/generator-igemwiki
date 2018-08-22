@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="/dist/js/vendor.js"></script>
+    <link rel="stylesheet" href="/dist/css/vendor.css">
+    <script>
+      $(function() {
+        $('header').load('/templates/header.html');
+        $('footer').load('/templates/footer.html');
+      });
+    </script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/wiki.js"></script>
+    <!--Added MathJax hack to make inline equations work-->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        processEscapes: true
+      }
+      });
+    </script>   </head>
+
+  <body>
+		<div id="igem-navbar-placeholder">
+		  <p>Placeholder for iGEM Navbar</p>
+		</div>
+    <header></header>    <main id="top">
+    	<article>
+      	<h1> Applied Design </h1>
+      	<p> This page is for teams who have developed a synbio product to solve a real world problem in an elegant way. The team will have considered how well the product addresses the problem versus other potential solutions, how the product integrates or disrupts other products and processes, and how its lifecycle can more broadly impact our lives and environments in positive and negative ways. </p>
+      </article>
+    </main>    <footer></footer>
+  </body>
+</html>

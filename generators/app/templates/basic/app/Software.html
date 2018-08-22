@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="/dist/js/vendor.js"></script>
+	<link rel="stylesheet" href="/dist/css/vendor.css">
+	<script>
+		$(function() {
+			$('header').load('/templates/header.html');
+			$('footer').load('/templates/footer.html');
+		});
+	</script>
+	<link rel="stylesheet" href="/css/styles.css">
+	<script src="/js/wiki.js"></script>
+	<!--Added MathJax hack to make inline equations work-->
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+		tex2jax: {
+		inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+		processEscapes: true
+	}
+});
+</script>   </head>
+
+<body>
+	<div id="igem-navbar-placeholder">
+		<p>Placeholder for iGEM Navbar</p>
+	</div>
+	<header></header>    <main id="top">
+		<article>
+			<h1> Software </h1>
+
+			<p> Regardless of the topic, iGEM projects often create or adapt computational tools to move the project forward. Because they are born out of a direct practical need, these software tools (or new computational methods) can be surprisingly useful for other teams. Without necessarily being big or complex, they can make the crucial difference to a project's success. This award tries to find and honor such "nuggets" of computational work. </p>
+
+			<p> To compete for the Best Software Tool prize, please describe your work on this page and also fill out the description on the judging form. </p>
+		</article>
+	</main>    <footer></footer>
+</body>
+</html>
+
+

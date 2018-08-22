@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="/dist/js/vendor.js"></script>
+	<link rel="stylesheet" href="/dist/css/vendor.css">
+	<script>
+		$(function() {
+			$('header').load('/templates/header.html');
+			$('footer').load('/templates/footer.html');
+		});
+	</script>
+	<link rel="stylesheet" href="/css/styles.css">
+	<script src="/js/wiki.js"></script>
+	<!--Added MathJax hack to make inline equations work-->
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+		tex2jax: {
+		inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+		processEscapes: true
+	}
+});
+</script>   </head>
+
+<body>
+	<div id="igem-navbar-placeholder">
+		<p>Placeholder for iGEM Navbar</p>
+	</div>
+	<header></header>    <main id="top">
+		<article>
+			<h1> Model </h1>
+
+			<p> Mathematical models and computer simulations provide a great way to describe the function and operation of BioBrick Parts and Devices. Synthetic Biology is an engineering discipline, and part of engineering is simulation and modeling to determine the behavior of your design before you build it. Designing and simulating can be iterated many times in a computer before moving to the lab. This award is for teams who build a model of their system and use it to inform system design or simulate expected behavior in conjunction with experiments in the wetlab. </p>
+
+			<p> Gold Medal Criterion </p>
+
+			<p> Convince the judges that your project's design and/or implementation is based on insight you have gained from modeling. This could be either a new model you develop or the implementation of a model from a previous team. You must thoroughly document your model's contribution to your project on your team's wiki, including assumptions, relevant data, model results, and a clear explanation of your model that anyone can understand. </p>
+
+			<p> The model should impact your project design in a meaningful way. Modeling may include, but is not limited to, deterministic, exploratory, molecular dynamic, and stochastic models. Teams may also explore the physical modeling of a single component within a system or utilize mathematical modeling for predicting function of a more complex device. </p>
+
+			<p> Best Model Special Prize </p>
+
+			<p> To compete for the Best Model prize, please describe your work on this page and also fill out the description on the judging form. Please note you can compete for both the gold medal criterion #3 and the best model prize with this page. </p>
+
+		</article>
+	</main>    <footer></footer>
+</body>
+</html>
+
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="/dist/js/vendor.js"></script>
+	<link rel="stylesheet" href="/dist/css/vendor.css">
+	<script>
+		$(function() {
+			$('header').load('/templates/header.html');
+			$('footer').load('/templates/footer.html');
+		});
+	</script>
+	<link rel="stylesheet" href="/css/styles.css">
+	<script src="/js/wiki.js"></script>
+	<!--Added MathJax hack to make inline equations work-->
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+		tex2jax: {
+		inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+		processEscapes: true
+	}
+});
+</script>   </head>
+
+<body>
+	<div id="igem-navbar-placeholder">
+		<p>Placeholder for iGEM Navbar</p>
+	</div>
+	<header></header>    <main id="top">
+		<article>
+			<h1> InterLab </h1>
+
+			<p> Bronze Medal Criterion #4 </p>
+
+			<p> Standard Tracks: Participate in the Interlab Measurement </p> 
+
+			<p> Study and/or obtain new, high quality experimental characterization data for an existing BioBrick Part or Device and enter this information on that part's Main Page in the Registry. The part that you are characterizing must NOT be from a 2018 part number range. </p> 
+
+		</article>
+	</main>    <footer></footer>
+</body>
+</html>
+
+

@@ -1,0 +1,22 @@
+{
+  "name": "<%= teamName %>-<%= year %>-wiki",
+  "description": "<%= teamName %> iGEM <%= year %> Frontend Dependencies",
+  "main": "index.js",
+  "authors": [
+    "<%= author %>"
+  ],
+  "license": "MIT",
+  "homepage": "<%= repo %>",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fontawesome": "^5.0.13",
+    "jquery": "^3.3.1"
+  }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="/dist/js/vendor.js"></script>
+	<link rel="stylesheet" href="/dist/css/vendor.css">
+	<script>
+		$(function() {
+			$('header').load('/templates/header.html');
+			$('footer').load('/templates/footer.html');
+		});
+	</script>
+	<link rel="stylesheet" href="/css/styles.css">
+	<script src="/js/wiki.js"></script>
+	<!--Added MathJax hack to make inline equations work-->
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+		tex2jax: {
+		inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+		processEscapes: true
+	}
+});
+</script>   </head>
+
+<body>
+	<div id="igem-navbar-placeholder">
+		<p>Placeholder for iGEM Navbar</p>
+	</div>
+	<header></header>    <main id="top">
+		<article>
+			<h1> Part Collection </h1>
+
+			<p> Did your team make a lot of great parts? Is there a theme that ties all your parts together? Do you have more than 10 parts in this collection? Did you make a CRISPR collection, a MoClo collection, or a collection of awesome pigment parts? Describe your parts collection on this page, so the judges can evaluate you for the Best Part Collection award. </p>
+
+			<p> While you should put all the characterization information for your parts on the Registry, you are encouraged to explain how all your parts form a collection on this page. </p>
+		</article>
+	</main>    <footer></footer>
+</body>
+</html>
+
+

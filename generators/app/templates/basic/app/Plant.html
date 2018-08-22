@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="/dist/js/vendor.js"></script>
+	<link rel="stylesheet" href="/dist/css/vendor.css">
+	<script>
+		$(function() {
+			$('header').load('/templates/header.html');
+			$('footer').load('/templates/footer.html');
+		});
+	</script>
+	<link rel="stylesheet" href="/css/styles.css">
+	<script src="/js/wiki.js"></script>
+	<!--Added MathJax hack to make inline equations work-->
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+		tex2jax: {
+		inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+		processEscapes: true
+	}
+});
+</script>   </head>
+
+<body>
+	<div id="igem-navbar-placeholder">
+		<p>Placeholder for iGEM Navbar</p>
+	</div>
+	<header></header>    <main id="top">
+		<article>
+			<h1> Plants </h1>
+
+			<p> iGEM introduced an award for plant synthetic biology for the first time in 2016. Many teams have worked in this area over the years, and we finally decided it was time for a special award to encourage teams in this area. Teams can work with a number of different plant and algal chassis to be eligible for this award. The prize will go to the team with the best plant synthetic biology project. As with all awards, if there are a sufficiently high number of participating teams, there will be separate awards for the undergraduate and overgraduate sections. </p>
+
+			<p> While not mandatory, teams are strongly encouraged to work with Phytobricks during your project. </p>
+		</article>
+	</main>    <footer></footer>
+</body>
+</html>
+
+

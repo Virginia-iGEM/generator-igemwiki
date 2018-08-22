@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="/dist/js/vendor.js"></script>
+	<link rel="stylesheet" href="/dist/css/vendor.css">
+	<script>
+		$(function() {
+			$('header').load('/templates/header.html');
+			$('footer').load('/templates/footer.html');
+		});
+	</script>
+	<link rel="stylesheet" href="/css/styles.css">
+	<script src="/js/wiki.js"></script>
+	<!--Added MathJax hack to make inline equations work-->
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+		tex2jax: {
+		inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+		processEscapes: true
+	}
+});
+</script>   </head>
+
+<body>
+	<div id="igem-navbar-placeholder">
+		<p>Placeholder for iGEM Navbar</p>
+	</div>
+	<header></header>    <main id="top">
+		<article>
+			<h1> Basic Part </h1>
+
+			<p> A basic part is a functional unit of DNA that cannot be subdivided into smaller component parts. BBa_R0051 is an example of a basic part, a promoter regulated by lambda cl. </p>
+
+			<p> Most genetically-encoded functions have not yet been converted to BioBrick parts. Thus, there are many opportunities to find new, cool, and important genetically encoded functions, and refine and convert the DNA encoding these functions into BioBrick standard biological parts. </p>
+		</article>
+	</main>    <footer></footer>
+</body>
+</html>
+
+

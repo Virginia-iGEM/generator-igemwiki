@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="/dist/js/vendor.js"></script>
+  <link rel="stylesheet" href="/dist/css/vendor.css">
+  <script>
+    $(function() {
+      $('header').load('/templates/header.html');
+      $('footer').load('/templates/footer.html');
+    });
+  </script>
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="/js/wiki.js"></script>
+  <!--Added MathJax hack to make inline equations work-->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+    processEscapes: true
+  }
+});
+</script>   </head>
+
+<body>
+  <div id="igem-navbar-placeholder">
+    <p>Placeholder for iGEM Navbar</p>
+  </div>
+  <header></header>    <main id="top">
+    <article>
+      <h1> Index </h1>
+
+      <p> This is your landing page. Put something here that will wow your audience and get their attention! </p>
+
+      <p> Talk about your project in a broad sense that will captivate people. Putting an animation or short blurb about your project could be a good idea here. </p>
+    </article>
+  </main>    <footer></footer>
+</body>
+</html>
+
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="/dist/js/vendor.js"></script>
+	<link rel="stylesheet" href="/dist/css/vendor.css">
+	<script>
+		$(function() {
+			$('header').load('/templates/header.html');
+			$('footer').load('/templates/footer.html');
+		});
+	</script>
+	<link rel="stylesheet" href="/css/styles.css">
+	<script src="/js/wiki.js"></script>
+	<!--Added MathJax hack to make inline equations work-->
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+		tex2jax: {
+		inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+		processEscapes: true
+	}
+});
+</script>   </head>
+
+<body>
+	<div id="igem-navbar-placeholder">
+		<p>Placeholder for iGEM Navbar</p>
+	</div>
+	<header></header>    <main id="top">
+		<article>
+			<h1> Measurement </h1>
+
+			<p> There are a lot of exciting parts in the Registry, but many parts have still not been characterized. Synthetic Biology needs great measurement approaches for characterizing new parts, and efficient new methods for characterizing many parts at once. If you've done something exciting in the area of Measurement, describe it here! </p>
+
+			<p> Best Innovation in Measurement Special Prize <p> 
+
+			<p> If you've done excellent work in measurement, you should consider nominating your team for this special prize. Designing great measurement approaches for characterizing new parts or developing and implementing an efficient new method for characterizing thousands of parts are good examples. </p>
+
+			<p> To compete for the Best Innovation in Measurement prize, please describe your work on this page and also fill out the description on the judging form. </p>P
+		</article>
+	</main>    <footer></footer>
+</body>
+</html>
+
+
