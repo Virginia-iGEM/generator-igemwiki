@@ -14,7 +14,7 @@ module.exports = class extends Generator {
   initializing() {
   }
   prompting() {
-    return new Promise(function(resolve, reject) {
+    return new Promise((resolve, reject) => {
       var questions = [{
         type: 'input',
         name: 'year',
@@ -25,21 +25,21 @@ module.exports = class extends Generator {
         name: 'teamName',
         message: 'What is your team name ' + 'exactly'.red + ' as it appears on the wiki? (Team:' + 'teamName'.magenta + ')',
         validate: function (input) {
-          return input === '';
+          return input !== '';
         }
       }, {
         type: 'input',
         name: 'author',
-        message: 'Author? (optional) `Name <email>`',
-        validate: function(input) {
-          return input === 'basic' || input === 'advanced';
-        }
+        message: 'Author? (optional) `Name <email>`'
       }, {
         type: 'input',
         name: 'template',
-        message: 'Would you like to use the basic or advanced template? [enter \'basic\' or \'advanced\']\n'
-        + 'The basic template only uses HTML, JavaScript and CSS, with some minimal postprocessing. None of the fancy stuff.\n'
-        + 'The advanced template uses Handlebars, SCSS, judicious use of AJAX loads, supports writing content in Markdown and .docx formats and has more thorough URL substitution. It\'s based directly on the wiki Virginia iGEM made in 2018.',
+        message: 'Would you like to use the basic or advanced template? [enter \'basic\' or \'advanced\']\n\n'
+        + 'The basic template only uses HTML, JavaScript and CSS, with some minimal postprocessing. None of the fancy stuff.\n\n'
+        + 'The advanced template uses Handlebars, SCSS, judicious use of AJAX loads, supports writing content in Markdown and .docx formats and has more thorough URL substitution. It\'s based directly on the wiki Virginia iGEM made in 2018.\n',
+        validate: function(input) {
+          return input === 'basic' || input === 'advanced';
+        },
         default: 'basic'
       }];
 
@@ -100,7 +100,7 @@ module.exports = class extends Generator {
     this.log('writing');
     // Copy bower.json
     this.fs.copyTpl(
-      this.templatePath(this.config.template + 'bower.json'),
+      this.templatePath(this.config.get('template') + 'bower.json'),
       this.destinationPath('bower.json'),
       this.config.getAll()
     );
@@ -112,7 +112,7 @@ module.exports = class extends Generator {
     );
     // Copy package.json
     this.fs.copyTpl(
-      this.templatePath(this.config.template + 'package.json'),
+      this.templatePath(this.config.get('template') + 'package.json'),
       this.destinationPath('package.json'),
       this.config.getAll()
     );
@@ -134,7 +134,7 @@ module.exports = class extends Generator {
     );
     // Copy all of app
     this.fs.copy(
-      this.templatePath(this.config.template + 'app'),
+      this.templatePath(this.config.get('template') + 'app'),
       this.destinationPath('app')
     );
     // Copy all of gulp
