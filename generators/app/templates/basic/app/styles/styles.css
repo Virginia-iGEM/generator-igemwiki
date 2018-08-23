@@ -471,7 +471,7 @@ ul {
   color: white;
   z-index: 9999;
   width: 100%;
-  font-size: 0.75em;
+  font-size: 0.75em !important;
   margin: 0;
   padding: 0; }
   #igem-navbar-placeholder p {
@@ -557,13 +557,15 @@ img {
   height: auto;
   max-height: 100%;
   max-width: 100%;
-  overflow: hidden; }
+  overflow: hidden; 
+  padding: 0 6em;
+}
 
 main {
   display: flex;
   flex-direction: row;
-  font-size: medium;
-  font-family: "OpenSans";
+  font-size: medium !important;
+  font-family: "OpenSans" !important;
   height: 100%;
   margin: 0 auto;
   height: auto;
@@ -574,41 +576,35 @@ main {
   main h1, main h2, main h3, main h4, main h5, main h6 {
     margin-top: 2em;
     margin-bottom: 2em;
-    font-weight: bold;
-    font-size: medium;
-    font-family: "OpenSans"; }
+    font-weight: bold !important;
+    font-size: medium !important;
+    font-family: "OpenSans" !important; }
   main h1 {
     margin-left: 2em;
-    font-size: 2.2em; }
+    font-size: 2.2em !important; }
   main h2 {
     margin-left: 2em;
-    font-size: 2em; }
+    font-size: 2em !important; }
   main h3 {
     margin-left: 4em;
-    font-size: 1.8em; }
+    font-size: 1.8em !important; }
   main h4 {
     margin-left: 4em;
-    font-size: 1.6em; }
+    font-size: 1.6em !important; }
   main h5 {
     margin-left: 4em;
-    font-size: 1.4em; }
+    font-size: 1.4em !important; }
   main h6 {
     margin-left: 4em;
-    font-size: 1.2em; }
+    font-size: 1.2em !important; }
   main p, main ul {
     margin: 3em 4em;
     line-height: 2em;
-    font-size: medium;
-    font-family: "OpenSans";
+    font-size: medium !important;
+    font-family: "OpenSans" !important;
     color: #1a1a1a; }
   main article {
     margin-top: 2em; }
-    main article img {
-      flex: 0 0 30em;
-      float: right;
-      clear: both;
-      position: relative;
-      margin-left: 5em; }
   main > * {
     background-size: cover; }
 
@@ -640,31 +636,31 @@ header {
     margin-top: 2em;
     margin-bottom: 2em;
     font-weight: bold;
-    font-size: medium;
-    font-family: "OpenSans"; }
+    font-size: medium !important;
+    font-family: "OpenSans" !important; }
   header h1 {
     margin-left: 2em;
-    font-size: 2.2em; }
+    font-size: 2.2em !important; }
   header h2 {
     margin-left: 2em;
-    font-size: 2em; }
+    font-size: 2em !important; }
   header h3 {
     margin-left: 4em;
-    font-size: 1.8em; }
+    font-size: 1.8em !important; }
   header h4 {
     margin-left: 4em;
-    font-size: 1.6em; }
+    font-size: 1.6em !important; }
   header h5 {
     margin-left: 4em;
-    font-size: 1.4em; }
+    font-size: 1.4em !important; }
   header h6 {
     margin-left: 4em;
-    font-size: 1.2em; }
+    font-size: 1.2em !important; }
   header p, header ul {
     margin: 3em 4em;
     line-height: 2em;
-    font-size: medium;
-    font-family: "OpenSans";
+    font-size: medium !important;
+    font-family: "OpenSans" !important;
     color: #1a1a1a; }
   header, header * {
     box-sizing: border-box;
@@ -703,7 +699,7 @@ header {
           width: 100%;
           background: #fffefb;
           color: #1f9dbd;
-          font-size: 1em;
+          font-size: 1em !important;
           white-space: nowrap;
           /* Text is occlude dinstead of wrapped */
           /* Re-add link glow to fix animation*/
@@ -754,8 +750,8 @@ header {
 
 footer {
   /* Footer height */
-  font-size: medium;
-  font-family: "OpenSans";
+  font-size: medium !important;
+  font-family: "OpenSans" !important;
   box-sizing: border-box;
   background-color: #1a1a1a;
   color: #fffefb;
@@ -804,7 +800,7 @@ footer {
     display: inline-block;
     margin: 0.15em;
     position: relative;
-    font-size: 1.2em; }
+    font-size: 1.2em !important; }
   .social-icons i {
     color: #fff;
     position: absolute;
