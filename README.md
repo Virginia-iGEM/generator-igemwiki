@@ -8,7 +8,10 @@ This tool is heavily inspired by Julian Mazzitelli's (iGEM Toronto 2016) [genera
 
 In English: `generator-igemwiki` makes creating a professional, high-quality iGEM wiki quick and easy. This tool provides you with a highly flexible template that can be edited locally and offline: changes are rendered instantly in your web browser and all files can be uploaded automatically to the iGEM wiki.
 
-TODO: Depending on experience level and ambition, different extensions for the generator will be available in the future which can help bring teams closer to their goal. The most simple scaffold uses pure HTML, CSS, JavaScript, and regular old images and fonts. We've added optional extensions such as [Handlebars](http://handlebarsjs.com/) which can be used for pre-publish templating, and vendor packages like [JQuery](https://api.jquery.com/) which can be used for live templating. Frameworks like Bootstrap, Bulma and Material can be added on that can simplify the process of web development for those who are new to programming. Preprocessors and postprocessors can be added such as SASS, Autoprefixer and minifiers that make writing clean, readable code faster.
+Two templates are currently available: 
+
+- The `basic` template includes only HTML, CSS and JavaScript. The build pipeline is fairly minimal and only includes some postprocessing, as well as Browserify, which we chose to include because it allows use of a more up-to-date version of JQuery (iGEM Wiki force-loads JQuery 1.11.1, Browserify lets us use JQuery 3.3.1 without conflict).
+- The `advanced` template includes Handlebars, SCSS prepocessing, as well Markdown and .docx importing for content via AJAX loads. It is a direct clone of Virginia iGEM 2018's wiki at a certain commit, with no modifications. We welcome you to base your wiki design off of ours, in the spirit of open source, however, to avoid accusations of plaigirism, if you choose to use the advanced template you both _should_ and _must_ modify it heavily to fit your team's vision.
 
 ## Quickstart
 
@@ -21,6 +24,8 @@ mkdir igem-2018-wiki
 cd igem-2018-wiki
 yo igemwiki
 ```
+
+Note that we are using Gulp 4; keep this in mind when looking up Gulp recipes if you intend on modifying the build pipeline.
 
 If that made no sense, please continue to [Installation and Setup](#installation-and-setup) for a full walkthrough.
 
