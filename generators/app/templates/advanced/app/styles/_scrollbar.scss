@@ -3,10 +3,11 @@
 .scrolltop {
   display: none;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 0;
   position: fixed;
   bottom: 20px;
   right: 10px;
+  z-index: 999;
 }
 
 .scroll {
@@ -18,8 +19,8 @@
   padding: 20px;
   text-align: center;
   margin: 0 0 0 0;
-  cursor: pointer;
-  transition: 0.5s;
+  //cursor: pointer;
+  //transition: 0.5s;
 }
 
 .scroll:hover {

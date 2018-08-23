@@ -1,4 +1,4 @@
-#image_gallery {
+#image_gallery, .team-bio{
   @include grid-container;
   img {
     @include grid-column(4);
@@ -7,10 +7,12 @@
     object-fit: cover;
     width: 150px;
     height: 150px;
-    @include shadow-2;
+    //@include shadow-2;
+    clear: initial;
+    cursor: pointer;
   }
-  padding: 3% 5%;
-  background-color: $background-light;
+  //padding: 3% 5%;
+  background-color: $background-light-1;
   overflow: hidden;
   position: relative;
 
@@ -44,7 +46,7 @@
     }
     img {
       @include circular;
-      @include grid-column(1);
+      @include grid-column(4);
       image-orientation: from-image;
       margin-bottom: 25px;
       min-width: 90%;
@@ -54,8 +56,23 @@
   }
 }
 
+/*circular images for advisors*/
+#advisor {
+   margin: 10px;
+    @include circular;
+    object-fit: cover;
+    width: 175px;
+    height: 175px;
+    //@include shadow-1;
+    flex: 0 0 30em;
+    float: right;
+    clear: both;
+    position: relative;
+    margin-left: 5em;
+}
+
 .team-bio {
-  margin: 6%;
+  margin: 20px;
   line-height: 2em;
   font-size: $font-size;
   font-family: $font-family;
@@ -63,11 +80,12 @@
   -moz-box-shadow: 0 0 5px #999;
   -webkit-box-shadow: 0 0 5px #999;
   box-shadow: 0 0 5px #999;
+  padding: 0.25px;
 }
+
 .hidden { 
   display: none; 
 }
 .unhidden { 
   display: block; 
 }
-

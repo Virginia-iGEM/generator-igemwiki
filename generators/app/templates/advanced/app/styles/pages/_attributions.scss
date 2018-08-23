@@ -1,0 +1,23 @@
+  #attributions {
+  	/*custom editing for the attributions page. Flipped so images are on the left rather than the right and images are circular.*/
+    margin: 10px;
+    @include circular;
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+    @include shadow-2;
+    flex: 0 0 30em;
+    float: left;
+    clear: both;
+    position: relative;
+    margin-left: 5em;
+}
+
+figcaption {
+    display: block;
+}
+
+#sponsors {
+	/*images in line with the text*/
+	float: none;
+}

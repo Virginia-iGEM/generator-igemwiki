@@ -1,67 +1,50 @@
 nav {
-  @include grid-column(1, $grid-layout);
-  @include grid-media($grid-layout-media) {
-    @include grid-column(2);
-  }
-  box-sizing: border-box;
-  position: relative;
-  background-color: $background-light-1;
-  min-height: 100vh;
-  margin: 0;
-  padding: 2em;
-  // Add vertical line
-  &::before {
-    content: '';
-    position: fixed;
-    clear: both;
-    top: 0px;
-    left: 3em;
-    bottom: 0px;
-    transform: translateX(-50%);
-    width: 4px;
-    background-color: $background-dark;
-  }
-  #line {
-    position: fixed;
-    //overflow: hidden;
-    li {
-      list-style: none;
-      width: calc(100% - 4em);
-      max-width: 400px;
-      margin: auto;
-      padding: 3em 2em 0 2em;
-      position: relative;
-      left: -5px;
-      a::before {
-        content: '';
-        position: absolute;
-        width: 64px;
-        height: 64px;
-        border: 3px solid $background-light;
-        background-color: $accent-cold-1;
-        border-radius: 100%;
-        top: 3.5em;
-        transform: translateY(-50%);
-        right: 6.55em;
-        z-index: 100;
-      }
-      ul {
-        display: none;
-        font-size: 0.8em;
-        padding-top: 3em;
-        li {
-          a::before {
-            width: 12px;
-            height: 12px;
-            right: 5.35em;
-            top: 0.75em;
+  flex: 1 0;
+  max-width: 30em;
+
+  #toc {
+    padding: $nav-height + 3em 2em;
+    position: sticky;
+    top: 0;
+    white-space: nowrap;
+
+    h1 {
+      font-size: 1.5em;
+    }
+
+    ul { // Primary ToC
+      li { // First-level headers
+        padding: .5em 0;
+
+        a {
+          font-size: 1.3em;
+        }
+
+        ul { // Subheaders
+          // For expand animation
+          height: 0;
+          overflow: hidden;
+          padding: .75em 0 .5em 1em;
+
+          &.current {
+            height: auto;
           }
-          padding: 0.5vh 0;
+
+          li { // Second-level headers
+            a {
+              font-size: 1em;
+            }
+          }
         }
       }
-      &.current ul{
-        display: block;
-      }
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint) {
+  nav>#toc {
+    ul>li>ul {
+      height: auto;
     }
   }
 }

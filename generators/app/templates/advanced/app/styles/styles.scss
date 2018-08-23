@@ -1,72 +1,163 @@
-@import "common";
+@import 'common';
 
-$grid-layout: ( 
-  columns: 1, 
-  //gutter: 2rem, 
+$nav-height: 3em; // Navbar height
+
+$pgridp-layout: (
+  columns: 1,
   gutter: 0
 );
 
-$grid-layout-media:( 
-  columns: 16, 
-  //gutter: 2rem, 
+$grid-layout-media: (
+  columns: 16,
+  //gutter: 2rem,
   gutter: 0,
   media: $breakpoint
 );
 
-a,
-a:visited {
-  text-decoration: none;
-  color: $accent-cold-1;
-  transition: all 0.2s ease-in-out;
-  &:hover {
-    text-decoration: none;
-    color: $accent-warm-1;
-    text-shadow: 0px 0px 8px $accent-warm;
+/*Overview page layout*/
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 5px;
+
+}
+
+.grid-selection {
+  @include shadow-1;
+  height: 500px;
+  margin: 10px;
+  padding: 20px;
+  position: relative;
+  width: 350px;
+  p {
+    text-align: left;
+    display: inline-block;
+    border: hidden;
+    bottom: 70px;
+    display: inline-block;
+    margin-left: 3em;
+    padding: 15px 32px;
+    position: absolute;
+  }
+
+
+/*Button for Overview*/
+  a.buttonoverview {
+    margin-left: 3em;
+    display: inline-block;
+    background-color: $accent-cold-1;
+    border: hidden;
+    bottom: 30px;
+    color: $text-light;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 3em;
+    padding: 15px 32px;
+    position: absolute;
+  }
+
+  .buttonoverview:hover {
+    @include shadow-2;
   }
 }
 
+/*Links*/
+a, a:visited {
+  color: $accent-cold-1;
+  text-decoration: none !important;
+  transition: color text-shadow .2s ease-in-out;
+
+  &:hover {
+    color: $accent-warm-1;
+    text-shadow: 0 0 8px $accent-warm;
+  }
+}
+
+/*Images*/
 img {
-  width: auto;
   height: auto;
   max-height: 100%;
   max-width: 100%;
   overflow: hidden;
+  width: auto;
 }
 
+/*The main styling for the "meat" and content of our wiki*/
 main {
+  @include common-style;
+  background-color: $background-light-1;
   display: flex;
   flex-direction: row;
-  @include common-style;
-  font-size: $font-size;
   font-family: $font-family;
-  height: 100%;
-  margin: 0 auto;
+  font-size: $font-size;
   height: auto;
+  justify-content: right;
+  margin: 0 auto;
   position: relative;
-  background-color: $background-light-1;
   z-index: 1;
+  line-height: normal;
+
+  .overview {
+    flex: 0 1 auto;
+  }
+
   article {
-    margin-top: 2em;
-    img, aside {
-      width: 30em;
+    flex: 0 0 65em;
+    margin-top: $nav-height + 2em;
+    text-align: justify;
+
+    img, figure {
+      //width: 30em;
+      flex: 0 0 30em;
       float: right;
+      clear: both;
       position: relative;
-      transform: translateY(-50%);
-      margin-left: 5em;
+      //transform: translateY(-50%);
+      //margin-left: 5em;
+      padding: 5px;
+    }
+    /*adding captions*/
+    figure {
+      margin: 0;
+      padding: 5px;
+      display: table;
+      margin-left: 3em;
+    }
+    figcaption {
+      text-align: center;
+      padding: 10px;
+      display: table-caption; 
+      caption-side: bottom;
+      font-style: italic;
     }
   }
+
+  #rightgutter {
+    flex: 1;
+  }
+
   &>* {
     background-size: cover;
-    //padding-right: 30px;
-    //padding-bottom: 50px;
-    //padding-left: 80px;
   }
 }
 
-@import "pages/index";
-@import "pages/team";
-@import "header";
-@import "scrollbar";
-@import "tooltips";
-@import "navline";
-@import "footer";
+@media screen and (max-width: $breakpoint) {
+  main {
+    flex-direction: column;
+    article {
+      //flex: 1;
+    }
+  }
+}
+
+
+@import 'pages/index';
+@import 'pages/team';
+@import 'pages/attributions';
+@import 'header';
+@import 'scrollbar';
+@import 'tooltips';
+@import 'navline';
+@import 'footer';

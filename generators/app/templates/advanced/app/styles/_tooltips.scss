@@ -26,6 +26,7 @@
     left: 50%;
     transform: translateX(-50%);
     //margin-left: -60px;
+    font-size: small;
 
     /* Fade in tooltip */
     opacity: 0;
@@ -51,7 +52,7 @@
     opacity: 1;
 }
 
-.tooltip:active {
+/*.tooltip:active {
     .longdef {
       width: 40vw;
       visibility: visible;
@@ -62,3 +63,4 @@
       opacity: 0;
     }
 }
+*/

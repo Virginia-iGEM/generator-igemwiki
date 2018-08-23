@@ -4,6 +4,49 @@
 $igem-navbar-height: 16px; // Variable for the height of the required iGEM Navbar. Use for sizing your own navbar.
 /* Override iGEM wiki settings, removing everything but the top navbar. */
 
+
+
+/*Taken from 2011 SDU Denmark iGEM page*/
+#contentSub, #search-controls, .firstHeading, #footer-box, #catlinks, #p-logo {
+    display:none;
+  }
+#top-section {
+    border: none;
+    height: 0px;
+  }
+
+/* Removes "teams" from the menubar */
+#menubar > ul > li:last-child {
+    display: none;
+  }
+/* Resizes the menubar to fix the links (default is 400px) */
+#menubar {
+    width: auto;
+  }
+
+body {
+    margin: 10px 0 0 0;
+    padding: 0;}
+#top-section {
+    width: 965px;
+    height: 0;
+    margin: 0 auto;
+    padding: 0;
+    border: none;}
+#menubar {
+    font-size: 65%;
+    top: -14px;}
+.left-menu:hover {
+    background-color: transparent;}
+#menubar li a {
+    background-color: transparent;}
+#menubar:hover {
+    color: white;}
+#menubar li a {
+    color: transparent;}
+#menubar:hover li a {
+    color: white;}
+
 #sideMenu,
 #top_title {
   display: none;
@@ -49,6 +92,7 @@ ul {
   // Placeholder that "subs in" for the iGEM navbar on dev builds
   height: $igem-navbar-height;
   position: fixed;
+  top: 0; // Push to top of screen
   display: block;
   background-color: #383838;
   border-bottom: solid black 2px;

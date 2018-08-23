@@ -2,7 +2,6 @@
 @import "fonts";
 @import "bourbon";
 @import "neat";
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,700italic,900,900italic,500italic,500,400italic);
 
 /* UVA Colors
 $background-dark-color:     #232D4B;
@@ -48,7 +47,6 @@ $link-color: rgb(255, 218, 159);
 $template-dark-color: #D9D9D9;
 */
 
-// Current site colors
 /*
 $background-dark-color: rgb(37, 37, 37);
 $background-light-color: rgb(247, 245, 233);
@@ -63,67 +61,66 @@ $background-dark:   #1a1a1a;
 $background-dark-1:   #424242;
 $background-light:  #fffefb;
 $background-light-1:  #f8f8f8;
-//$background-light:  #ffffff;
-//$accent-warm:       #eb00c2;
-//$accent-warm-1:     #a7018b;
-//$accent-warm-2:     #740060;
+/*$background-light:  #ffffff;*/
+$accent-warm:       #eb00c2;
+$accent-warm-1:     #aa34ba;
+$accent-warm-2:     #8a67b5;
 $accent-cold:       #26fffa;
 $accent-cold-1:     rgb(36, 190, 228);
 $accent-cold-2:     rgb(31, 157, 189);
-$accent-warm:       #16ff5a;
-$accent-warm-1:     #2cc75b;
-$accent-warm-2:     #2e8849;
 $text-dark:           $background-dark;
 $text-light:          $background-light;
 
 //$link-color:                $accent-cold-1;
 
-$breakpoint: 1000px; // If the screen is under this width, switch to mobile view
+//$breakpoint: 1000px; // If the screen is under this width, switch to mobile view
+$breakpoint: calc(20em + 65em); // If the screen is under this width, switch to mobile view
 
 $font-family: "OpenSans";
 $font-size: medium;
 
 @mixin common-style {
   h1, h2, h3, h4, h5, h6 {
-    margin-top: 2em;
-    margin-bottom: 2em;
-    font-weight: bold;
-    font-size: $font-size;
-    font-family: $font-family;
+    margin-top: 1em !important;
+    margin-bottom: 2em !important;
+    font-weight: bold !important;
+    font-size: $font-size !important;
+    font-family: $font-family !important;
   }
   h1 {
-    margin-left: 2em;
-    font-size: 2.2em;
+    margin-left: 2em !important;
+    font-size: 2.2em !important;
   }
   h2 {
-    margin-left: 3em;
-    font-size: 2em;
+    margin-left: 2em !important;
+    font-size: 2em !important;
   }
   h3 {
-    margin-left: 4em;
-    font-size: 1.8em;
+    margin-left: 4em !important;
+    font-size: 1.8em !important;
   }
   h4 {
-    margin-left: 4em;
-    font-size: 1.6em;
+    margin-left: 4em !important;
+    font-size: 1.6em !important;
   }
   h5 {
-    margin-left: 4em;
-    font-size: 1.4em;
+    margin-left: 4em !important;
+    font-size: 1.4em !important;
   }
   h6 {
-    margin-left: 4em;
-    font-size: 1.2em;
+    margin-left: 4em !important;
+    font-size: 1.2em !important;
   }
 
   p {
-    margin: 3em 4em;
-    line-height: 2em;
-    font-size: $font-size;
-    font-family: $font-family;
-    color: $text-dark;
+    margin: 2em 2em !important;
+    line-height: 3em !important;
+    font-size: $font-size !important;
+    font-family: $font-family !important;
+    color: $text-dark !important;
   }
 }
+
 
 @mixin shadow-1 {
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
