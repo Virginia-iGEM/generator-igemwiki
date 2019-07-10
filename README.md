@@ -2,6 +2,12 @@
 
 This tool is heavily inspired by Julian Mazzitelli's (iGEM Toronto 2016) [generator-igemwiki](https://github.com/igemuoftATG/generator-igemwiki), uses much of his code, builds on much of his work, and is an attempt at providing a stable and easily community-maintained package. Shout-out to Julian for making this tool a possibility and being an overall awesome guy.
 
+## Call for Maintainers!
+
+As iGEM is a 1-year thing, this generator is no longer being updated. I will push minor bugfixes on request (which I'm doing for Virginia 2019's team).
+
+If you are interested in maintaining this package, send me an email at dtc9bb@virginia.edu. The advanced template could use a generic version that isn't just a copy of our wiki repository. Most of the work that needs to be done is on [igem-wikibrick](https://github.com/Virginia-iGEM/igem-wikibrick).
+
 ## Description
 
 `generator-igemwiki` is a [Yeoman generator](http://yeoman.io/); a tool that creates scaffolds for iGEM wikis for use with Virginia 2018's wiki build tool, [igem-wikibrick](https://github.com/Virginia-iGEM/igem-wikibrick).
@@ -19,7 +25,7 @@ For those who already have Node installed, know of Git and know their terminal:
 
 ```bash
 npm install -g npm
-npm install -g yo bower gulp@next https://github.com/Virginia-iGEM/generator-igemwiki
+npm install -g yo bower gulp https://github.com/Virginia-iGEM/generator-igemwiki
 mkdir igem-2018-wiki
 cd igem-2018-wiki
 yo igemwiki
@@ -37,11 +43,11 @@ Once you've downloaded Node.js, launch a terminal. On Windows, Powershell is our
 
 > If you are nervous about using the terminal, we have written a short [Introduction to the Terminal](https://github.com/Virginia-iGEM/2018-tutorials/tree/master/cli) article, specifically aimed at iGEM teams.
 
-Now, we'll update `npm`, the Node.js package manager (like `apt` or `pip`) to the latest version, install `yo` (Yeoman), install `bower` (our live dependency manager), install `gulp@next` (gulp v4.0, which is the command-line task runner our build system uses), and `generator-igemwiki` (which is, of course, this generator):
+Now, we'll update `npm`, the Node.js package manager (like `apt` or `pip`) to the latest version, install `yo` (Yeoman), install `bower` (our live dependency manager), install `gulp` (development dependency manager), and `generator-igemwiki` (which is, of course, this generator):
 
 ```bash
 npm install -g npm    # update npm to latest version
-npm install -g yo bower gulp@next
+npm install -g yo bower gulp
 npm install https://github.com/Virginia-iGEM/generator-igemwiki
 ```
 
@@ -96,7 +102,7 @@ Back to the tutorial. Once `yo igemwiki` finishes running, it will have created 
 
 ![Generated Project](.tutorial/generated_project.PNG)
 
-Currently only one template is available, and it is a mirror of the Virginia iGEM Wiki on August 2nd, 2018 at 3:01pm. In the future, we will add more generic templates with varying feature sets.
+There are two templates available; teh one shown here is the 'advaced' template, is a mirror of the Virginia iGEM Wiki as it was on August 2nd, 2018 at 3:01pm. In the future.
 
 This generated project has the following properties:
 
