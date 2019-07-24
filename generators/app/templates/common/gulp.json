@@ -1,0 +1,5 @@
+{
+  flags: {
+    nodeFlags: '--tls-min-v1.0'
+  }
+}
