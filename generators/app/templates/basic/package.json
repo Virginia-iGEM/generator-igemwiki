@@ -17,7 +17,7 @@
     "bower": "^1.8.4",
     "css-reset-and-normalize": "^1.0.1",
     "gulp": "^4.0.0",
-    "igem-wikibrick": "^0.7.4",
+    "igem-wikibrick": "^0.7.10",
     "string-format": "^2.0.0"
   },
   "repository": {
