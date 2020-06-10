@@ -1,3 +1,6 @@
+// Necessary to force compatibilty with igem TLSv1.0
+require('tls').DEFAULT_MIN_VERSION = 'TLSv1'
+
 // Add additional modules up here
 var path = require('path'); // Need path to to absolutify dirname
 
