@@ -1,12 +1,12 @@
 # generator-igemwiki
 
+## Archive Notice
+
+My understanding is that iGEM is moving towards GitLab and away from the original wiki system. As a result, this tool is likely no longer useful. Placing it in the archive if anyone still needs to use it for whatever reason.
+
+## Summary
+
 This tool is heavily inspired by Julian Mazzitelli's (iGEM Toronto 2016) [generator-igemwiki](https://github.com/igemuoftATG/generator-igemwiki), uses much of his code, builds on much of his work, and is an attempt at providing a stable and easily community-maintained package. Shout-out to Julian for making this tool a possibility and being an overall awesome guy.
-
-## Call for Maintainers!
-
-As iGEM is a 1-year thing, this generator is no longer being updated. I will push minor bugfixes on request (which I'm doing for Virginia 2019's team).
-
-If you are interested in maintaining this package, send me an email at dtc9bb@virginia.edu. The advanced template could use a generic version that isn't just a copy of our wiki repository. Most of the work that needs to be done is on [igem-wikibrick](https://github.com/Virginia-iGEM/igem-wikibrick).
 
 ## Description
 
